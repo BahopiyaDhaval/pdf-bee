@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>pdf.bee</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#FFC107,#FFEB3B);
+text-align:center;
+margin:0;
+}
+
+.header{
+background:black;
+color:white;
+padding:20px;
+font-size:35px;
+font-weight:bold;
+}
+
+.container{
+margin-top:60px;
+}
+
+.box{
+background:white;
+padding:30px;
+margin:20px auto;
+width:320px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+button{
+background:#FFC107;
+border:none;
+padding:10px 20px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ffb300;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+🐝 pdf.bee
+</div>
+
+<div class="container">
+
+<div class="box">
+
+<h3>PDF to Image</h3>
+
+<form action="/pdf_to_image" method="post" enctype="multipart/form-data">
+
+<input type="file" name="pdf" accept=".pdf" required>
+
+<br><br>
+
+<button>Convert & Download</button>
+
+</form>
+
+</div>
+
+<div class="box">
+
+<h3>Image to PDF</h3>
+
+<form action="/image_to_pdf" method="post" enctype="multipart/form-data">
+
+<input type="file" name="images" accept="image/*" multiple required>
+
+<br><br>
+
+<button>Convert & Download</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
