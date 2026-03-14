@@ -2,6 +2,8 @@ Flask
 Pillow
 pdf2image
 PyPDF2
+pdf2docx
+python-docx
 reportlab
 pikepdf
 gunicorn
