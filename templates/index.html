@@ -23,14 +23,14 @@ font-weight:bold;
 }
 
 .container{
-margin-top:60px;
+margin-top:40px;
 }
 
 .box{
 background:white;
-padding:30px;
-margin:20px auto;
-width:320px;
+padding:25px;
+margin:15px auto;
+width:330px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
@@ -60,9 +60,10 @@ background:#ffb300;
 
 <div class="container">
 
+
 <div class="box">
 
-<h3>PDF to Image</h3>
+<h3>PDF → Image</h3>
 
 <form action="/pdf_to_image" method="post" enctype="multipart/form-data">
 
@@ -76,13 +77,14 @@ background:#ffb300;
 
 </div>
 
+
 <div class="box">
 
-<h3>Image to PDF</h3>
+<h3>Image → PDF</h3>
 
 <form action="/image_to_pdf" method="post" enctype="multipart/form-data">
 
-<input type="file" name="images" accept="image/*" multiple required>
+<input type="file" name="images" accept="image/png,image/jpeg" multiple required>
 
 <br><br>
 
@@ -91,6 +93,75 @@ background:#ffb300;
 </form>
 
 </div>
+
+
+<div class="box">
+
+<h3>PDF → DOCX</h3>
+
+<form action="/pdf_to_doc" method="post" enctype="multipart/form-data">
+
+<input type="file" name="pdfdoc" accept=".pdf" required>
+
+<br><br>
+
+<button>Convert & Download</button>
+
+</form>
+
+</div>
+
+
+<div class="box">
+
+<h3>DOCX → PDF</h3>
+
+<form action="/doc_to_pdf" method="post" enctype="multipart/form-data">
+
+<input type="file" name="docfile" accept=".docx" required>
+
+<br><br>
+
+<button>Convert & Download</button>
+
+</form>
+
+</div>
+
+
+<div class="box">
+
+<h3>PDF Merge</h3>
+
+<form action="/merge_pdf" method="post" enctype="multipart/form-data">
+
+<input type="file" name="pdfs" accept=".pdf" multiple required>
+
+<br><br>
+
+<button>Merge & Download</button>
+
+</form>
+
+</div>
+
+
+<div class="box">
+
+<h3>PDF Split</h3>
+
+<form action="/split_pdf" method="post" enctype="multipart/form-data">
+
+<input type="file" name="pdf" accept=".pdf" required>
+
+<br><br>
+
+<button>Split & Download</button>
+
+</form>
+
+</div>
+
 
 </div>
 
